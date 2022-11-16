@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1703.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "paskaita1108praejimoKontrolesSistema", "paskaita1108praejimoKontrolesSistema\paskaita1108praejimoKontrolesSistema.csproj", "{EB6532CE-61BF-40C0-9E74-96F0E570167D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{99A0A509-02CB-40E0-AD83-5DA8FC051F8D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB6532CE-61BF-40C0-9E74-96F0E570167D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB6532CE-61BF-40C0-9E74-96F0E570167D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB6532CE-61BF-40C0-9E74-96F0E570167D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB6532CE-61BF-40C0-9E74-96F0E570167D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99A0A509-02CB-40E0-AD83-5DA8FC051F8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A0A509-02CB-40E0-AD83-5DA8FC051F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A0A509-02CB-40E0-AD83-5DA8FC051F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A0A509-02CB-40E0-AD83-5DA8FC051F8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7030AA41-24C5-4728-97FF-19BB3A284CED}
+	EndGlobalSection
+EndGlobal
