@@ -8,8 +8,8 @@ using paskaita1108praejimoKontrolesSistema.Repositories;
 namespace paskaita1108praejimoKontrolesSistema {
     public class Program {
         public static void Main() {
-            HumanRepository humanRepository = new HumanRepository();
-            EventRepository eventRepository = new EventRepository();
+            //HumanRepository humanRepository = new HumanRepository();
+            //EventRepository eventRepository = new EventRepository();
 
 
 
@@ -24,7 +24,7 @@ namespace paskaita1108praejimoKontrolesSistema {
 
             List<GatesEvent> gatesEventList = new List<GatesEvent>();
 
-            var menu = new Menu(humanRepository, eventRepository);
+            var menu = new Menu();
             menu.ShowMenu();
 
 

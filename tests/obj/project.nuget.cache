@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IT4YxqwS7kXy5pKUXJsfdwN4i/8TZWOVTEWtcDNaJcV+K9jV/5f12JjfaEoVGMMk+2CNRp4A1aW7/dV2rrkENQ==",
+  "dgSpecHash": "QqH4mm/JVRyfjdXB+sx4XxHbKZS2j9ofGDNhVXB5GDoL2WVyLm3YgLGhg8AjSYq37N53VEjmiEUJs/fp56F6nA==",
   "success": true,
-  "projectFilePath": "/Users/admin/Desktop/vigi .NET/paskaita1108praejimoKontrolesSistema/tests/tests.csproj",
+  "projectFilePath": "/Users/admin/Desktop/vigi .NET/praejimoKontrole/tests/tests.csproj",
   "expectedPackageFiles": [
     "/Users/admin/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
     "/Users/admin/.nuget/packages/microsoft.codecoverage/17.1.0/microsoft.codecoverage.17.1.0.nupkg.sha512",

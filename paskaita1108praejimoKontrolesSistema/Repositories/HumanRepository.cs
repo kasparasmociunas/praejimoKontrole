@@ -4,12 +4,12 @@ using paskaita1108praejimoKontrolesSistema.Services;
 namespace paskaita1108praejimoKontrolesSistema.Repositories
 
 {
-    public class HumanRepository
+    public static class HumanRepository
     {
 
-        public  List<Human> humans = new List<Human>();
+        public static List<Human> humans = GetHumanList();
 
-        public List<Human> GetHumanList() {
+        public static List<Human> GetHumanList() {
             FileService fileService = new FileService();
             List<Human> humans = fileService.ReadHumanList();
             return humans;
@@ -17,11 +17,9 @@ namespace paskaita1108praejimoKontrolesSistema.Repositories
 
 
 
-        public void PrintHumanList()
+        public static void PrintHumanList()
         {
-            FileService fileService = new FileService();
-            List<Human> humanList = fileService.ReadHumanList();
-            foreach (var human in humanList) {
+            foreach (var human in humans) {
                 Console.WriteLine("ID: {0}, name: {1} {2}, is inside: {3}", human.Id, human.FirstName, human.LastName, human.IsInside);
             }
         }

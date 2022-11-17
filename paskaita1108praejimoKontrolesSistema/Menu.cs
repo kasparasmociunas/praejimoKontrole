@@ -8,22 +8,30 @@ namespace paskaita1108praejimoKontrolesSistema
 
     public class Menu
     {
-        static HumanRepository humanRepository1 { get; set; }
-        static EventRepository eventRepository1 { get; set; }
+  
 
-        public Menu(HumanRepository humanRepository, EventRepository eventRepository) {
-            humanRepository1 = humanRepository;
-            eventRepository1 = eventRepository;
+        public Menu( )
+        {
+  
         }
 
 
-        PassThroughControllerService passThroughService = new PassThroughControllerService(humanRepository1,eventRepository1);
+        PassThroughControllerService passThroughService = new PassThroughControllerService();
         bool continueLoop = true;
+
+       
+
         public void ShowMenu() {
             while (continueLoop) {
                 Console.WriteLine("Menu:");
                 Console.WriteLine("1: Print Employee list");
                 Console.WriteLine("2: Log event");
+                Console.WriteLine("3: Show event report");
+                Console.WriteLine("4: Show sorted event report");
+                Console.WriteLine("5: Show working time report");
+
+                Console.WriteLine("9: Exit");
+
 
                 var userChoice = GetUserChoice();
                 
@@ -31,18 +39,32 @@ namespace paskaita1108praejimoKontrolesSistema
                     case 0:
                         continue;
                     case 1:
-                        humanRepository1.PrintHumanList();
-                        continueLoop = false;
+                        HumanRepository.PrintHumanList();
+                        continueLoop = true;
                         break;
                     case 2:
-                        Console.WriteLine("pasirinko 2");
-                        
                         passThroughService.AccessChecker();
                         passThroughService.EventLogger();
 
+                        continueLoop = true;
+                        break;
+                    case 3:
+                        EventRepository.ShowEvents();
+                        continueLoop = true;
+                        break;
+                    case 4:
+                        EventRepository.ShowSortedEvents();
+                        continueLoop = true;
+                        break;
+                    case 5:
+                        EventRepository.ShowWorkingHours();
+                        continueLoop = true;
+                        break;
+                    case 9:
+                        Console.WriteLine("Goodbye!");
                         continueLoop = false;
                         break;
-                   
+
                     default :
                         break;
 

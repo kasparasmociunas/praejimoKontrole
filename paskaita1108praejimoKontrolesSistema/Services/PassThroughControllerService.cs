@@ -13,34 +13,34 @@ namespace paskaita1108praejimoKontrolesSistema
 
 
 
-   
+
     public class PassThroughControllerService   
     {
 
         int uniqID = 0;
-        static HumanRepository humanRepository { get; set; }
-        static EventRepository eventRepository { get; set; }
+        //static HumanRepository humanRepository { get; set; }
+        //static EventRepository eventRepository { get; set; }
 
-        public PassThroughControllerService(HumanRepository humanRepository1, EventRepository eventRepository1)
+
+
+        public PassThroughControllerService()
         {
-            humanRepository = humanRepository1;
-            eventRepository = eventRepository1;
+            
+      
         }
 
 
 
-        Menu menu = new Menu(humanRepository,eventRepository);
 
         List<int> userChoices;
         bool canPass;
 
 
 
-
         public List<int> DataColector() {
             Console.WriteLine("Choose your name: ");
 
-            humanRepository.PrintHumanList();
+            HumanRepository.PrintHumanList();
             var employeeNumber = Convert.ToInt32(Console.ReadLine());
             employeeNumber = employeeNumber - 1;
             Console.WriteLine("Choose gates (1-4): ");
@@ -53,16 +53,16 @@ namespace paskaita1108praejimoKontrolesSistema
         public void AccessChecker()
         {
             List<int> userChoices = DataColector();
-            var humanList = humanRepository.GetHumanList();
+          
             
-            if (humanList[userChoices[0]].GateNumber == userChoices[1])
+            if (HumanRepository.humans[userChoices[0]].GateNumber == userChoices[1])
             {
-                Console.WriteLine($"{humanList[userChoices[0]].FirstName} can pass");
+                Console.WriteLine($"{HumanRepository.humans[userChoices[0]].FirstName} can pass");
                 canPass = true;
                 
             }
             else {
-                Console.WriteLine($"{humanList[userChoices[0]].FirstName} is not allowed to use this entrance");
+                Console.WriteLine($"{HumanRepository.humans[userChoices[0]].FirstName} is not allowed to use this entrance");
                canPass = false;
             }
 
@@ -73,32 +73,40 @@ namespace paskaita1108praejimoKontrolesSistema
         public void EventLogger()
 
         {
-            Console.WriteLine("atidarytas event logger");
-            var humanList = humanRepository.GetHumanList();
             var timeStamp = DateTime.Now;
 
 
 
             var newGatesEvent = new GatesEvent();
+            bool status = HumanRepository.humans[userChoices[0]].IsInside;
             newGatesEvent.EventId = uniqID;
             
-            newGatesEvent.timestamp = timeStamp;
+            newGatesEvent.Timestamp = timeStamp;
             newGatesEvent.GateNumber = userChoices[1];
-            newGatesEvent.Human = humanList[userChoices[0]];
+            newGatesEvent.Human = HumanRepository.humans[userChoices[0]];
+            if (status)
+            {
+                newGatesEvent.Direction = "left";
+            }
+            else{ newGatesEvent.Direction = "entered"; }
 
             if (canPass)
             {
-                eventRepository.AddEvent(newGatesEvent);
+               
+                EventRepository.AddEvent(newGatesEvent);
                 uniqID++;
-                Console.WriteLine("event pridetas");
-
-                menu.ShowMenu();
-                
+                if (status)
+                {
+                    HumanRepository.humans[userChoices[0]].IsInside = false; //keicia statusa, lauke ar viduje
+                }
+                else {
+                    HumanRepository.humans[userChoices[0]].IsInside = true;
+                }
+                Console.WriteLine("***event recorded***");
+              
               
             }
-            if (!canPass) {
-                Console.WriteLine("Event logger nieko neprides");
-            }
+
 
         }
 

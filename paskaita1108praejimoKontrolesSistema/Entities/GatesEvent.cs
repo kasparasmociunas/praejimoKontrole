@@ -8,7 +8,8 @@ namespace paskaita1108praejimoKontrolesSistema.Entities
         public int EventId { get; set; }
         public int GateNumber { get; set; }
         public Human Human { get; set; }
-        public DateTime timestamp { get; set; }
+        public DateTime Timestamp { get; set; }
+        public string Direction { get; set; }
 
 
 

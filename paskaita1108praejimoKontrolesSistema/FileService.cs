@@ -25,7 +25,7 @@ namespace paskaita1108praejimoKontrolesSistema.Services
                         FirstName = humanDataArray[1],
                         LastName = humanDataArray[2],
                         GateNumber = Convert.ToInt32(humanDataArray[3]),
-                        WorkingHours = Convert.ToInt32(humanDataArray[4]),
+                        WorkingHours = TimeSpan.Parse(humanDataArray[4]),
                         IsInside = Convert.ToBoolean(humanDataArray[5])
 
                     };

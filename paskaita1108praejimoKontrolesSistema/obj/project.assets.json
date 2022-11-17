@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/admin/Desktop/vigi .NET/paskaita1108praejimoKontrolesSistema/paskaita1108praejimoKontrolesSistema/paskaita1108praejimoKontrolesSistema.csproj",
+      "projectUniqueName": "/Users/admin/Desktop/vigi .NET/praejimoKontrole/paskaita1108praejimoKontrolesSistema/paskaita1108praejimoKontrolesSistema.csproj",
       "projectName": "paskaita1108praejimoKontrolesSistema",
-      "projectPath": "/Users/admin/Desktop/vigi .NET/paskaita1108praejimoKontrolesSistema/paskaita1108praejimoKontrolesSistema/paskaita1108praejimoKontrolesSistema.csproj",
+      "projectPath": "/Users/admin/Desktop/vigi .NET/praejimoKontrole/paskaita1108praejimoKontrolesSistema/paskaita1108praejimoKontrolesSistema.csproj",
       "packagesPath": "/Users/admin/.nuget/packages/",
-      "outputPath": "/Users/admin/Desktop/vigi .NET/paskaita1108praejimoKontrolesSistema/paskaita1108praejimoKontrolesSistema/obj/",
+      "outputPath": "/Users/admin/Desktop/vigi .NET/praejimoKontrole/paskaita1108praejimoKontrolesSistema/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/admin/.nuget/NuGet/NuGet.Config"
